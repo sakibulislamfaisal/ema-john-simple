@@ -2,9 +2,10 @@
      display:flex;
 }
 .product-container{
-     margin-left: 160px;
+     margin-left:40px;
      width:65%;
      margin-right: 30px;
      border-right: 1px solid gray;
+     
      
 }

@@ -7,7 +7,8 @@ const Cart = (props) => {
    let total = 0;
    for(let i=0;i<cart.length;i++){
        const element = cart[i];
-       total = total + element.price;
+       total = total + element.price * element.quantity;
+     
    }
 
    let shipping =0;
@@ -35,6 +36,9 @@ const Cart = (props) => {
              <p>Shipping Charge : {shipping}</p>
              <p>Tax + VAT : {grandTotal}</p>
              <h4>Total Price : {grandTotal}</h4>
+             {
+                 props.children
+             }
         </div>
     );
 };
