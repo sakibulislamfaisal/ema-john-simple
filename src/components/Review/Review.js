@@ -19,12 +19,12 @@ const Review = () => {
 
 
     const removeProduct = (keys) =>{
-         console.log('clicked');
+        // console.log('clicked');
          const remove = cart.filter( pd => pd.key !== keys);
          setCart(remove)
          removeFromDatabaseCart(keys);
     }
-    useEffect( ()=>{
+    useEffect( () => {
          const saveCart = getDatabaseCart();
          const productkeys = Object.keys(saveCart);
          const cartProducts = productkeys.map( key => {
@@ -33,8 +33,8 @@ const Review = () => {
               products.quantity = saveCart[key];
               return products;
          },[])
-         setCart(cartProducts)
-    })
+         setCart(cartProducts);
+    }, [])
 
     let thankyou ;
     if(orderPlaced){
@@ -59,8 +59,9 @@ const Review = () => {
              </div>
              <div className="cart-container">
                 <Cart cart={cart}>
-                      <button onClick={handlerOrder} className="main-button">Place Order</button>
+                <button onClick={handlerOrder} className="main-button">Place Order</button>
                 </Cart>
+               
              </div>
         </div>
     );

@@ -25,7 +25,7 @@ function App() {
                     <Route path="/review"><Review></Review></Route>
                     <Route path="/manage"><Inventory></Inventory></Route>
                     <Route exact path="/"><Shop></Shop></Route>
-                    <Route exact path="/product/:productkey"><ProductReview></ProductReview></Route>
+                    <Route  path="/product/:productkey"><ProductReview></ProductReview></Route>
                     <Route path="*"><Notfound></Notfound></Route>
                     
 

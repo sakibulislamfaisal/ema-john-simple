@@ -21,7 +21,7 @@ const Shop = () => {
                  return product;
          })
          setCart(previousKey)
-    })
+    },[])
 
     const handleAddProduct = (product) =>{
         //  console.log("product added");
