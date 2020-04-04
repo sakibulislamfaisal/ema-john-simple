@@ -5,8 +5,13 @@ import fakeData from '../../fakeData';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import Cart from '../Cart/Cart';
 import happyImage from '../../images/giphy.gif';
+import { Link } from 'react-router-dom';
+import { auth } from 'firebase';
+import { useAuth } from '../Login/useAuth';
 
 const Review = () => {
+
+     const auth = useAuth();
    
     const [cart ,setCart] = useState([]);
     const [orderPlaced , setorderPlaced] = useState(false);
@@ -56,10 +61,20 @@ const Review = () => {
             {
                  thankyou
             }
+            {
+                  !cart.length && <h3>Your Cart is Empty . <a href="/shop">Keep Shopping</a></h3>
+            }
              </div>
              <div className="cart-container">
                 <Cart cart={cart}>
-                <button onClick={handlerOrder} className="main-button">Place Order</button>
+                  
+                        <Link to="/shipment"> 
+                        {
+                 auth.user ?  <button  className="main-button">Proceed to CheckOut</button> :<button  className="main-button">Login to Proceed</button>
+                        }
+                        </Link>
+                        
+                  
                 </Cart>
                
              </div>
