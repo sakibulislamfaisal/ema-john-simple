@@ -13,7 +13,7 @@ const Shop = () => {
 
     //Data load from Database
      useEffect( ()=>{
-         fetch('http://localhost:4200/products')
+         fetch('https://immense-woodland-40379.herokuapp.com/products')
          .then(res => res.json())
          .then(data =>{
               setProducts(data)

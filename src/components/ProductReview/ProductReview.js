@@ -10,7 +10,7 @@ const ProductReview = () => {
     const [product,setProduct] = useState(null);
 
     useEffect(()=>{
-            fetch('http://localhost:4200/products/' + productkey)
+            fetch('https://immense-woodland-40379.herokuapp.com/products/' + productkey)
             .then(res => res.json())
             .then(data =>{
                  setProduct(data);

@@ -29,7 +29,7 @@ const Review = () => {
     useEffect( () => {
          const saveCart = getDatabaseCart();
          const productkeys = Object.keys(saveCart);
-         fetch('http://localhost:4200/getProductsByKey',{
+         fetch('https://immense-woodland-40379.herokuapp.com/getProductsByKey',{
           method : 'POST',
           body : JSON.stringify(productkeys), 
           headers: {

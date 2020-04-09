@@ -7,7 +7,7 @@ const Inventory = () => {
       const handleAddProducts = () =>{
     //     const product = fakeData[0];
     //     console.log('Before Insert' ,product);
-    //     fetch('http://localhost:4200/addProducts' , {
+    //     fetch('https://immense-woodland-40379.herokuapp.com/addProducts' , {
     //         method : 'POST',
     //         body : JSON.stringify(fakeData), 
     //         headers: {
