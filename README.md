@@ -4,7 +4,7 @@
 
 A single page restaurant app where people are able to select food in their cart and checkout the cart with their information.
 
-[Live Website](https://ema-john-simple-website.web.app/) | [Live API Server](https://hot-onion-restaurant-server.herokuapp.com/)
+[Live Website](https://ema-john-simple-website.web.app/) | [Live API Server](https://ema-john-backend-server.herokuapp.com/)
 
 ### Features
 
